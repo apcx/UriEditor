@@ -81,7 +81,7 @@ fun editor(input: String, onCloseRequest: (String) -> Unit) {
                                 }
                             }, Modifier.padding(start = 4.dp).width(540.dp), maxLines = 2)
 
-                            if (itemJob?.isActive != true && ("&" in value || value.firstOrNull() == '{')) {
+                            if (itemJob?.isActive != true && ("?" in value || value.firstOrNull() == '{')) {
                                 var expanding by remember { mutableStateOf(false) }
                                 IconButton({ expanding = true }) { Icon(Icons.AutoMirrored.Filled.ArrowForward, null) }
 
